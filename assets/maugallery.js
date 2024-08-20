@@ -153,8 +153,13 @@
           index = i ;
         }
       });
+
+      /**
+       *  Ajout de -1 a l'index permet d'aller a l'image précédente s'il y en a une , sinon on prend la derniere image du tableau 
+       * 
+       *  */ 
       next =
-        imagesCollection[index] ||
+        imagesCollection[index - 1] ||
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
@@ -192,7 +197,10 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      /**
+       * Ajout +1 a l'index, ou retour a la premiere image du tableau imagesCollection 
+       */
+      next = imagesCollection[index + 1] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -237,11 +245,12 @@
     },
     filterByTag() {
       if ($(this).hasClass("active-tag")) {
+        console.log($(this), 'test bouton')
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
-
+      $(this).addClass("active active-tag");
+      
       var tag = $(this).data("images-toggle");
 
       $(".gallery-item").each(function() {
