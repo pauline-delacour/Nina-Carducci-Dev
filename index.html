@@ -26,7 +26,22 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.min.js" defer></script> 
 	<script src="./assets/scripts.min.js" defer></script>
-
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Person",
+		  "name": "Nina Carducci - Photographe",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace Lorraine",
+			"addressLocality": "Bordeaux",
+			"addressRegion": "Nouvelle-Aquitaine",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+		  },
+		  "telephone": "05.56.67.78.89"
+		}
+	</script>
 </head>
 <body>
 	<header class="top-header">
@@ -169,16 +184,6 @@
 			<div class="picture right">
 				<img src="./assets/images/camera.webp" alt="photo d'un appareil photo">
 			</div>
-		</div>
-		<div itemscope itemtype="http://schema.org/Photograph">
-			<span itemprop="name">Nina Carducci - Photographe</span>
-			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAdress">
-				<span itemprop="streetAddress">68 avenue Alsace Lorraine</span>
-				<span itemprop="addressLocality">Bordeaux</span>
-				<span itemprop="addressRegion">Nouvelle-Aquitaine</span>
-				<span itemprop="postalCode">33200</span>
-			</div>
-			<span itemprop="telephone">05.56.67.78.89</span>
 		</div>
 	</footer>
 </body>
